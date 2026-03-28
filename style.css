@@ -3,6 +3,120 @@ body {
     font-family: Arial, sans-serif;
     background: #f7f2ee;
     color: #4b3d36;
+}
+
+/* מרכז מסך */
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* מעטפה */
+.envelope {
+    width: 300px;
+    height: 200px;
+    background: #efe4dc;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* המכתב */
+.letter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.8s ease;
+}
+
+/* המכסה */
+.flap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #e2d3c7;
+    clip-path: polygon(0 0, 50% 50%, 100% 0);
+    transform-origin: top;
+    transition: transform 0.8s ease;
+}
+
+/* מצב פתוח */
+.envelope.open .flap {
+    transform: rotateX(180deg);
+}
+
+.envelope.open .letter {
+    transform: translateY(-120px);
+}
+
+/* הזמנה */
+.invitation {
+    padding: 20px;
     text-align: center;
-    padding: 40px 20px;
+    animation: fadeIn 1s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+/* hero */
+.hero {
+    margin-top: 40px;
+}
+
+.hero h1 {
+    font-size: 32px;
+}
+
+.date {
+    color: #888;
+}
+
+/* פרטים */
+.details {
+    margin-top: 30px;
+}
+
+.box {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* כפתורים */
+.btn {
+    display: block;
+    margin: 10px auto;
+    padding: 12px;
+    background: #c8a7a0;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    width: 80%;
+}
+
+.btn.secondary {
+    background: #ddd;
+    color: #333;
+}
+
+/* אנימציה */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
