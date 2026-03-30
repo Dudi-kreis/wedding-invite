@@ -1,14 +1,28 @@
 const envelope = document.getElementById("envelope");
 const invitation = document.getElementById("invitation");
 
-envelope.addEventListener("click", () => {
+let opened = false;
+
+function openInvitation() {
+    if (opened) return;
+
+    opened = true;
     envelope.classList.add("open");
 
     setTimeout(() => {
         invitation.classList.remove("hidden");
-        window.scrollTo({
-            top: document.body.scrollHeight,
-            behavior: "smooth"
+        invitation.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
         });
-    }, 700);
+    }, 900);
+}
+
+envelope.addEventListener("click", openInvitation);
+
+envelope.addEventListener("keydown", function (event) {
+    if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openInvitation();
+    }
 });
