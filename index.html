@@ -14,36 +14,40 @@
         <div class="intro-inner">
             <p class="small-label">Wedding Invitation</p>
 
-            <div id="envelope" class="envelope" tabindex="0">
+            <div id="envelope" class="envelope">
                 <div class="envelope-letter">
-                    <div class="monogram">N&A</div>
-                    <p class="envelope-short-text">לחצו לפתיחת ההזמנה</p>
+                    <div class="letter-inner">
+                        <div class="monogram">N&A</div>
+                        <p class="envelope-short-text">לחצו על החותמת לפתיחת ההזמנה</p>
+                    </div>
                 </div>
 
                 <div class="envelope-base"></div>
                 <div class="envelope-left"></div>
                 <div class="envelope-right"></div>
                 <div class="envelope-top"></div>
-                <div class="seal">N&E</div>
+
+                <button id="sealButton" class="seal" type="button" aria-label="open invitation">
+                    N&A
+                </button>
             </div>
 
-            <p class="tap-text">לחצו על המעטפה</p>
+            <p class="tap-text">לחצו על החותמת</p>
         </div>
     </section>
 
     <main id="invitation" class="invitation hidden">
-
         <section class="hero">
             <div class="hero-image-placeholder">
                 <div class="hero-overlay">
                     <p class="hero-kicker">מתרגשים להזמין אתכם</p>
-                    <h1>נועה & אלעד</h1>
+                    <h1>נועה<br />ואלון</h1>
                     <p class="hero-date">יום חמישי | 12.09.2026</p>
                 </div>
             </div>
         </section>
 
-        <section class="content-section welcome-section">
+        <section class="content-section">
             <h2>בשעה טובה</h2>
             <p>
                 נשמח לחגוג איתכם את היום הכי מרגש שלנו.
@@ -51,7 +55,7 @@
             </p>
         </section>
 
-        <section class="content-section details-section">
+        <section class="content-section">
             <h2>פרטי האירוע</h2>
 
             <div class="details-grid">
@@ -82,7 +86,7 @@
             </div>
         </section>
 
-        <section class="content-section schedule-section">
+        <section class="content-section">
             <h2>מהלך הערב</h2>
 
             <div class="timeline">
@@ -112,18 +116,15 @@
             </div>
         </section>
 
-        <section class="content-section closing-section">
+        <section class="content-section">
             <h2>מילה מאיתנו</h2>
             <p>
                 הנוכחות שלכם תשמח אותנו מאוד.
                 תודה שאתם חלק מהחיים שלנו, ואנחנו כבר מחכים לחגוג איתכם.
             </p>
 
-            <p class="closing-note">
-                נשמח לאישור הגעה עד 20.08.2026
-            </p>
+            <p class="closing-note">נשמח לאישור הגעה עד 20.08.2026</p>
         </section>
-
     </main>
 
     <script src="script.js"></script>

@@ -1,4 +1,5 @@
 const envelope = document.getElementById("envelope");
+const sealButton = document.getElementById("sealButton");
 const invitation = document.getElementById("invitation");
 
 let opened = false;
@@ -15,12 +16,12 @@ function openInvitation() {
             behavior: "smooth",
             block: "start"
         });
-    }, 900);
+    }, 950);
 }
 
-envelope.addEventListener("click", openInvitation);
+sealButton.addEventListener("click", openInvitation);
 
-envelope.addEventListener("keydown", function (event) {
+sealButton.addEventListener("keydown", function (event) {
     if (event.key === "Enter" || event.key === " ") {
         event.preventDefault();
         openInvitation();
