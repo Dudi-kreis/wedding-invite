@@ -4,126 +4,126 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Wedding Invitation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&family=Heebo:wght@300;400;500;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Bellefair&display=swap"
+        rel="stylesheet" />
+
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
-    <section class="intro-screen">
+    <section class="intro-screen" id="introScreen">
         <div class="intro-inner">
-            <p class="small-label">Wedding Invitation</p>
+            <p class="small-label" id="introLabel">Wedding Invitation</p>
 
             <div id="envelope" class="envelope">
                 <div class="envelope-letter">
                     <div class="letter-inner">
-                        <div class="monogram">N&A</div>
-                        <p class="envelope-short-text">לחצו על החותמת לפתיחת ההזמנה</p>
+                        <div class="monogram" id="monogram">N&A</div>
+                        <p class="envelope-short-text" id="envelopeShortText">
+                            לחצו על החותמת לפתיחת ההזמנה
+                        </p>
                     </div>
                 </div>
 
-                <div class="envelope-base"></div>
+                <div class="envelope-back"></div>
                 <div class="envelope-left"></div>
                 <div class="envelope-right"></div>
                 <div class="envelope-top"></div>
 
                 <button id="sealButton" class="seal" type="button" aria-label="open invitation">
-                    N&A
+                    <span id="sealText">N&A</span>
                 </button>
             </div>
 
-            <p class="tap-text">לחצו על החותמת</p>
+            <p class="tap-text" id="tapText">לחצו על החותמת</p>
         </div>
     </section>
 
     <main id="invitation" class="invitation hidden">
         <section class="hero">
-            <div class="hero-image-placeholder">
+            <div class="hero-image-placeholder" id="heroImage">
+                <div class="hero-top-badge" id="heroBadge">תמונה של הזוג תיכנס כאן</div>
+
                 <div class="hero-overlay">
-                    <p class="hero-kicker">מתרגשים להזמין אתכם</p>
-                    <h1>נועה<br />ואלון</h1>
-                    <p class="hero-date">יום חמישי | 12.09.2026</p>
+                    <p class="hero-kicker" id="heroKicker">מתרגשים להזמין אתכם</p>
+                    <h1 id="coupleNames">נועה ואלון</h1>
+                    <p class="hero-date" id="heroDate">יום חמישי | 12.09.2026</p>
                 </div>
             </div>
         </section>
 
         <section class="content-section">
-            <h2>בשעה טובה</h2>
-            <p>
+            <h2 id="welcomeTitle">בשעה טובה</h2>
+            <p id="welcomeText">
                 נשמח לחגוג איתכם את היום הכי מרגש שלנו.
-                הכנו עבורכם הזמנה דיגיטלית קצרה ונוחה, כדי שכל הפרטים יהיו במקום אחד.
             </p>
         </section>
 
         <section class="content-section">
             <h2>פרטי האירוע</h2>
 
-            <div class="details-grid">
-                <div class="detail-card">
-                    <span class="detail-label">תאריך</span>
-                    <strong>12.09.2026</strong>
+            <div class="details-list">
+                <div class="detail-row">
+                    <div class="detail-icon">📅</div>
+                    <div class="detail-content">
+                        <span class="detail-label">תאריך</span>
+                        <strong id="detailDate">12.09.2026</strong>
+                    </div>
                 </div>
 
-                <div class="detail-card">
-                    <span class="detail-label">קבלת פנים</span>
-                    <strong>19:30</strong>
+                <div class="detail-row">
+                    <div class="detail-icon">🕒</div>
+                    <div class="detail-content">
+                        <span class="detail-label">קבלת פנים</span>
+                        <strong id="receptionTime">19:30</strong>
+                    </div>
                 </div>
 
-                <div class="detail-card">
-                    <span class="detail-label">חופה</span>
-                    <strong>20:30</strong>
+                <div class="detail-row">
+                    <div class="detail-icon">✨</div>
+                    <div class="detail-content">
+                        <span class="detail-label">חופה</span>
+                        <strong id="ceremonyTime">20:30</strong>
+                    </div>
                 </div>
 
-                <div class="detail-card">
-                    <span class="detail-label">מיקום</span>
-                    <strong>גן האירועים קדם</strong>
+                <div class="detail-row">
+                    <div class="detail-icon">📍</div>
+                    <div class="detail-content">
+                        <span class="detail-label">מיקום</span>
+                        <strong id="venueName">גן האירועים קדם</strong>
+                    </div>
                 </div>
             </div>
 
-            <div class="buttons">
-                <a href="https://maps.google.com" target="_blank" class="btn btn-primary">ניווט למקום</a>
-                <a href="https://wa.me/972500000000" target="_blank" class="btn btn-secondary">אישור הגעה</a>
+            <div class="buttons two-buttons">
+                <a id="wazeButton" href="#" target="_blank" rel="noreferrer" class="btn btn-waze">
+                    ניווט עם Waze
+                </a>
+
+                <a id="googleMapsButton" href="#" target="_blank" rel="noreferrer" class="btn btn-google">
+                    ניווט עם Google Maps
+                </a>
             </div>
         </section>
 
         <section class="content-section">
             <h2>מהלך הערב</h2>
 
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-time">19:30</div>
-                    <div class="timeline-content">
-                        <strong>קבלת פנים</strong>
-                        <p>נשנושים, דרינקים ומפגש עם כולם לפני שמתחילים.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">20:30</div>
-                    <div class="timeline-content">
-                        <strong>חופה</strong>
-                        <p>הרגע שלנו, ואנחנו רוצים אתכם איתנו שם.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">21:00</div>
-                    <div class="timeline-content">
-                        <strong>ארוחה ומסיבה</strong>
-                        <p>אוכל טוב, מוזיקה וריקודים עד הלילה.</p>
-                    </div>
-                </div>
-            </div>
+            <div class="timeline" id="timeline"></div>
         </section>
 
         <section class="content-section">
-            <h2>מילה מאיתנו</h2>
-            <p>
+            <h2 id="closingTitle">מילה מאיתנו</h2>
+            <p id="closingText">
                 הנוכחות שלכם תשמח אותנו מאוד.
-                תודה שאתם חלק מהחיים שלנו, ואנחנו כבר מחכים לחגוג איתכם.
             </p>
-
-            <p class="closing-note">נשמח לאישור הגעה עד 20.08.2026</p>
         </section>
     </main>
 
