@@ -26,12 +26,13 @@ const invitationData = {
     introLabel: "Wedding Invitation",
     envelopeText: "לחצו על החותמת לפתיחת ההזמנה",
 
-    monogram: "N&A",
-    sealText: "N&A",
+    monogram: "N&E",
+    sealText: "N&E",
+    image: "images/NoaAndElad.png",
 
     heroBadge: "תמונה של הזוג תיכנס כאן",
     heroKicker: "מתרגשים להזמין אתכם",
-    coupleNames: "נועה ואלון",
+    coupleNames: "נועה ואלעד",
     heroDate: "יום חמישי | 12.09.2026",
 
     welcomeTitle: "בשעה טובה",
@@ -98,8 +99,24 @@ function setText(id, value) {
     }
 }
 
+function applyHeroImage() {
+    const hero = document.getElementById("heroImage");
+
+    if (!hero) return;
+
+    if (invitationData.image) {
+        hero.classList.add("has-image");
+
+        hero.style.background = `
+      linear-gradient(180deg, rgba(110,80,70,0.12), rgba(60,35,30,0.6)),
+      url("${invitationData.image}") center/cover no-repeat
+    `;
+    }
+}
+
 function applyInvitationData() {
     applyFonts();
+    applyHeroImage();
     setText("introLabel", invitationData.introLabel);
     setText("envelopeShortText", invitationData.envelopeText);
 

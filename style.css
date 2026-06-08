@@ -249,6 +249,10 @@ body {
         linear-gradient(135deg, #f2e5dc 0%, #e8d5ca 50%, #d8beb5 100%);
 }
 
+.hero-image-placeholder.has-image .hero-top-badge {
+    display: none;
+}
+
 .hero-image-placeholder::after {
     content: "";
     position: absolute;
